@@ -117,6 +117,7 @@ a::selection{
 }
 
 .header {
+  position: relative;
   &__logo {
     display: flex;
     align-items: center;
@@ -317,6 +318,17 @@ a::selection{
   }
 }
 
+.header__logo--big {
+  position: absolute;
+  opacity: .4;
+  top: 140px;
+  font-style: italic;
+  color: white;
+  text-shadow: 0 0 30px rgba(0,0,0,0.1);
+  font-size: 260px;
+  letter-spacing: 10px;
+  font-weight: 600;
+}
 
 .email {
   position: relative;
