@@ -356,9 +356,8 @@ a::selection{
   &__items {
     opacity: 0;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: -5000px;
+    top: -5000px;
 
     li {
       list-style: none;

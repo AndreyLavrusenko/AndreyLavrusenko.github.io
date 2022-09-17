@@ -13,13 +13,22 @@ email.addEventListener('click', () => {
         overflow: hidden;
         left: 0;
         top: 0;
-    `
+    `;
+
+    block__items.style.cssText = `
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    `;
 
     setTimeout(() => {
         block__items.style.cssText = `
         transition: 1s;
         opacity: 1;
-    `
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    `;
     }, 400)
 })
 
@@ -34,15 +43,16 @@ close.addEventListener('click', () => {
         overflow: visible;
         position: fixed;
         z-index: 0;
-    `
+    `;
 
     block__items.style.cssText = `
-        visibility: hidden;
-    `
+         left: -5000px;
+        top: -5000px;
+    `;
 
     setTimeout(() => {
         block.style.cssText = `
          top: 100vh;
-    `
+    `;
     }, 600)
 })
