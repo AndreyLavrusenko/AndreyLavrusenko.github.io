@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang=ru>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/img/Group-302.ico" type="image/ico">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <title>Портфолио | Лаврусенко Андрей</title>
+</head>
+<body>
+
+<div class="container">
+
+    <section>
+        <div class="header">
+            <div class="header__logo">
+                <div class="header__logo-icon"><span>L</span></div>
+                <div class="header__right">
+                    <div class="header__right-title">Лаврусенко Андрей</div>
+                    <div class="header__right-subtitle">Front-end developer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="about__content">
+                <img class="about__img animate__animated animate__fadeIn wow" data-wow-delay="0.4s" src="./img/445958d9fc58522f7dee7a0b1fe0ef06-sticker.png">
+                <p class="about__name animate__animated wow animate__fadeInUp" data-wow-delay="0.2s">Лаврусенко Андрей</p>
+                <h1 class="about__title animate__animated wow animate__fadeInUp" data-wow-delay="0.3s">Front-end Developer</h1>
+                <p class="about__text animate__animated wow animate__fadeInUp" data-wow-delay="0.4s">Углубленно стал изучать web-программирование больше 2-х лет назад. За это время сверстал не один десяток сайтов, прошел курс получил большой практический опыт в JavaScript, прошёл несколько курсов по React и немного освоил PHP.</p>
+                <div class="about__link animate__animated wow animate__fadeInUp" data-wow-delay="0.5s">
+                    <a href="#work" class="about__link--item">Мои проекты</a> <span>или</span> <a href="https://github.com/Sn1peXx" class="about__link--item">GitHub</a>
+                </div>
+            </div>
+            <a href="#work" class="about__slider animate__animated wow animate__fadeIn" data-wow-delay="0.6s">
+                <div class="about__slider--content"></div>
+            </a>
+        </div>
+
+        <div class="email">
+            <img src="./img/email-svgrepo-com.svg" alt="" class="email__img">
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class="work">
+            <a name="work"></a>
+            <h2 class="work--title">Мои проекты</h2>
+            <div class="work__content">
+                <a href="https://unionuniverse.one/" class="work__item">
+                    <div class="work__img"><img src="./img/union.jpg" alt="" class="work--img"></div>
+                    <div class="work__wrapper">
+                        <h2 class="work__title">Union Universe</h2>
+                        <p class="work__text">Образовательная платформа <br><span>Стек: Php, JS, Верстка</span></p>
+                    </div>
+                </a>
+
+                <a href="https://cryptodb-sn1pexx.vercel.app" class="work__item">
+                    <div class="work__img"><img src="./img/2968bd6307db45cea2e4f649a601c381.jpg" alt="" class="work--img work"></div>
+                    <div class="work__wrapper">
+                        <h2 class="work__title">Криптобиржа</h2>
+                        <p class="work__text">Получает актуальную информацию о криптовалюте, позволяя совершать сделки в реальном времени<br><span>Стек: Api, React, Redux</span></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="work">
+            <div class="work__content">
+                <a href="http://i95239ig.beget.tech/" class="work__item">
+                    <div class="work__img"><img src="./img/surf.jpg" alt="" class="work--img work"></div>
+                    <div class="work__wrapper">
+                        <h2 class="work__title">Surf - Лендинг</h2>
+                        <p class="work__text">Верстка сайта с адаптацией под любые устройства <br><span>Стек: Scss, HTML</span></p>
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div class="block">
+    <div class="block__content">
+        <ul class="block__items">
+            <li class="block__items--first block--close">Закрыть</li>
+            <li><a href="mailto:lavrusenkoandrey@gmail.com">Email</a></li>
+            <li><a href="https://t.me/AndreyLavrusenko">Telegram</a></li>
+            <li><a href="https://vk.com/andrey_lavrusenko">VK</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>
