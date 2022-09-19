@@ -226,19 +226,40 @@ a::selection {
     .email__img:not(:hover) {
       transition: all .7s; }
 
-.block__items {
-  margin: 0 auto;
-  text-align: center; }
-  .block__items li {
-    list-style: none;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 3.25rem;
-    line-height: 4.5625rem;
-    color: white;
-    margin-bottom: 20px; }
-    .block__items li a {
-      text-decoration: none; }
+.block {
+  height: 100vh;
+  background-color: #4831d4; }
+  .block__items {
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .block__items--first {
+      position: relative;
+      color: white !important;
+      font-size: 2rem;
+      margin-bottom: -50px; }
+    .block__items li {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 3.25rem;
+      line-height: 4.5625rem;
+      margin-bottom: 20px; }
+      .block__items li a {
+        text-decoration: none;
+        color: #ccf381; }
+
+.block__items--first::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  background-color: #FFFFFF;
+  left: -53px;
+  top: 45%; }
 
 @keyframes about_bounce {
   0% {
