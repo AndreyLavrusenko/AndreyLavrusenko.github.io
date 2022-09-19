@@ -252,6 +252,13 @@ a::selection {
         text-decoration: none;
         color: #ccf381; }
 
+.block__link:hover {
+  transition: .7s;
+  transform: scale(1.1); }
+
+.block__link:not(:hover) {
+  transition: .5s; }
+
 .block__items--first::before {
   content: "";
   width: 40px;
@@ -259,7 +266,7 @@ a::selection {
   position: absolute;
   background-color: #FFFFFF;
   left: -53px;
-  top: 45%; }
+  top: 40%; }
 
 #content {
   overflow-x: hidden; }

@@ -325,7 +325,6 @@ a::selection {
       color:white !important;
       font-size: 2rem;
       margin-bottom: -50px;
-
     }
 
     li {
@@ -341,8 +340,17 @@ a::selection {
         color: #ccf381;
       }
     }
-
   }
+}
+
+
+.block__link:hover {
+  transition: .7s;
+  transform: scale(1.1);
+}
+
+.block__link:not(:hover) {
+  transition: .5s;
 }
 
 
@@ -353,7 +361,7 @@ a::selection {
   position: absolute;
   background-color: #FFFFFF;
   left: -53px;
-  top: 45%; }
+  top: 40%; }
 
 
 #content {
