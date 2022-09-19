@@ -261,19 +261,6 @@ a::selection {
   left: -53px;
   top: 45%; }
 
-@keyframes about_bounce {
-  0% {
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, -50%); }
-  50% {
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -50%); }
-  100% {
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, -50%); } }
 #content {
   overflow-x: hidden; }
 
@@ -347,6 +334,29 @@ section {
   section svg {
     padding-right: 30px; }
 
+.stage:hover h2 {
+  margin-left: 50px; }
+.stage:hover img {
+  transition: 1s;
+  transform: scale(1.2); }
+.stage:hover svg {
+  transition: 1s;
+  transform: scale(1.2); }
+.stage:hover h2 {
+  transition: 1s;
+  transform: scale(1.2);
+  border-bottom: 3px solid white; }
+
+.stage:not(:hover) h2 {
+  margin-left: 0; }
+.stage:not(:hover) img {
+  transition: .6s; }
+.stage:not(:hover) svg {
+  transition: 0.6s; }
+.stage:not(:hover) h2 {
+  transition: .6s;
+  border: none; }
+
 #stage-1 {
   background: #090979;
   background: linear-gradient(to right, #00c6fb 0%, #005bea 100%); }
@@ -366,6 +376,19 @@ section {
   background: #ccf381;
   background: linear-gradient(to right, #8A2387, #E94057, #F27121); }
 
+@keyframes about_bounce {
+  0% {
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%); }
+  50% {
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%); }
+  100% {
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%); } }
 @media only screen and (max-width: 991px) {
   body {
     padding-left: 0 !important; }

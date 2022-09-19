@@ -355,26 +355,6 @@ a::selection {
   left: -53px;
   top: 45%; }
 
-@keyframes about_bounce {
-  0% {
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, -50%);
-  }
-
-  50% {
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -50%);
-  }
-
-  100% {
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 
 #content {
   overflow-x: hidden;
@@ -463,6 +443,42 @@ section {
   }
 }
 
+.stage:hover {
+  h2 {
+    margin-left: 50px;
+  }
+  img {
+    transition: 1s;
+    transform: scale(1.2);
+  }
+  svg {
+    transition: 1s;
+    transform: scale(1.2);
+  }
+  h2 {
+    transition: 1s;
+    transform: scale(1.2);
+    border-bottom: 3px solid white;
+  }
+}
+
+
+.stage:not(:hover) {
+  h2 {
+    margin-left: 0;
+  }
+  img {
+    transition: .6s;
+  }
+  svg {
+    transition: .6s
+  }
+  h2 {
+    transition: .6s;
+    border: none;
+  }
+}
+
 #stage-1 {
   background: #090979;
   //background: linear-gradient(to right, #090979, #00d4ff);
@@ -488,6 +504,27 @@ section {
   background: #ccf381;
   //background: linear-gradient(to right, #4831d4, #ccf381);
   background: linear-gradient(to right, #8A2387, #E94057, #F27121);
+}
+
+
+@keyframes about_bounce {
+  0% {
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -519,3 +556,5 @@ section {
     top: 0;
   }
 }
+
+
