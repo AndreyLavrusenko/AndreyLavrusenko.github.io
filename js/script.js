@@ -1,3 +1,4 @@
+// Ссылки при нажатии на слайдер
 const stage_1 = document.getElementById("stage-1");
 const stage_2 = document.getElementById("stage-2");
 const stage_3 = document.getElementById("stage-3");
@@ -18,75 +19,85 @@ linkStage(stage_3, "http://i95239ig.beget.tech/");
 
 
 
-gsap.registerPlugin(ScrollTrigger);
+const block = document.querySelector('.block__modal');
+const email = document.querySelector('.email__img');
+const close = document.querySelector('.block__items--close');
+const block__items = document.querySelector('.block__items--modal');
 
-let sections = gsap.utils.toArray(".stage");
-let scrollContainer = document.querySelector("#hscroll");
-let nav = document.getElementById("navmenu").getElementsByTagName("a");
-let contact = document.querySelector("#btncontact");
+email.addEventListener('click', () => {
+    block.style.cssText = `
+        display:block;
+        visibility: visible;
+        height: 100vh;
+        width: 100vw;
+        z-index: 4000;
+        position: fixed;
+        overflow: hidden;
+        left: 0;
+        background-color: #4831d4;
+        top: 0;
+    `;
 
-ScrollTrigger.matchMedia({
-    "(min-width: 992px)": function() {
+    block__items.style.cssText = `
+        left: 50%;
+        top: 50%;
+    `;
 
-        let scrollTween = gsap.to(sections, {
-            // скорость прокрутки
-            xPercent: -100 * (sections.length - 1),
-            ease: "none"
-        });
+    setTimeout(() => {
+        block__items.style.cssText = `
+        transition: 1s;
+        opacity: 1;
+    `;
+    }, 300)
+})
 
-        let horizontalScroll = ScrollTrigger.create({
-            animation: scrollTween,
-            trigger: scrollContainer,
-            pin: true,
-            scrub: 1,
-            end: () => "+=" + scrollContainer.offsetWidth,
-        });
 
-        var dragRatio = scrollContainer.offsetWidth / (window.innerWidth * (sections.length - 1));
-        var drag = Draggable.create(".proxy", {
-            trigger: scrollContainer,
-            type: "x",
-            onPress() {
-                this.startScroll = horizontalScroll.scroll();
-            },
-            onDrag() {
-                horizontalScroll.scroll(this.startScroll - (this.x - this.startX) * dragRatio);
-            }
-        })[0];
+close.addEventListener('click', (e) => {
+    e.preventDefault();
 
-    },
-    "all": function() {
+    block.style.cssText = `
+        transition: 1s !important;
+        opacity: 0;
+        overflow: visible;
+        position: fixed;
+        z-index: 0;
+    `;
 
+    block__items.style.cssText = `
+         left: -5000px;
+         top: -5000px;
+    `;
+
+    setTimeout(() => {
+        block.style.cssText = `
+         top: 100vh;
+         opacity: 1;
+    `;
+    }, 600)
+})
+
+
+const clientHeight = document.documentElement.clientHeight;
+const email__img_path = document.querySelector('.email__img--path');
+
+window.addEventListener('scroll', () => {
+
+    if (window.pageYOffset >= (clientHeight - 67)) {
+        email__img_path.style.cssText = `
+            fill: black !important;
+            transition: .6s;
+        `;
+    } else {
+        email__img_path.style.cssText = `
+            fill: white !important;
+            transition: .6s;
+        `;
     }
-});
 
 
-
-const wideViewport = window.matchMedia("(min-width: 992px)");
-
-document.querySelectorAll("#navmenu a").forEach(element => {
-
-    element.addEventListener('click', function(e) {
-
-        e.preventDefault();
-        const id = this.getAttribute('href').split('#')[1];
-
-        const targetElement = document.getElementById(id)
-        const navBar = document.getElementById('masthead')
-
-
-        if(wideViewport.matches) {
-            gsap.to(window, {
-                scrollTo: ( (targetElement.offsetLeft + navBar.offsetWidth*sections.indexOf(targetElement)) * ( scrollContainer.offsetWidth / (scrollContainer.offsetWidth - targetElement.offsetWidth)) ),
-                duration: 2
-            })
-        } else {
-            gsap.to(window, {
-                scrollTo: targetElement,
-                duration: 2
-            })
-        }
-
-    });
-
-});
+    if (window.pageYOffset >= (clientHeight - 30) * 2) {
+        email__img_path.style.cssText = `
+            visibility: hidden;
+        `;
+    }
+})
