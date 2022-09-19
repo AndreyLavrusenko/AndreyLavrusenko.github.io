@@ -29,7 +29,7 @@
 
 *,
 *:after,
-*:before{
+*:before {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -42,7 +42,7 @@ body {
   font-family: 'Helvetica', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
@@ -61,54 +61,64 @@ p {
 
 }
 
+header {
+  color: white;
+  //background: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+  //background: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+  background: linear-gradient(90deg, #4831d4 67%, #ccf381 33%);
+}
 
-h1::selection{
-  background-color: #888A8E;
+
+h1::selection {
+  background-color: rgba(72, 49, 212, 0.35);
   color: white;
 }
 
-div::selection{
-  background-color: #888A8E;
+div::selection {
+  background-color: rgba(72, 49, 212, 0.35);
   color: white;
 }
 
-span::selection{
-  background-color: #888A8E;
+span::selection {
+  background-color: rgba(72, 49, 212, 0.35);
   color: white;
 }
 
-img::selection{
-  background-color: #888A8E;
+img::selection {
+  background-color: inherit;
   color: white;
 }
 
-h2::selection{
-  background-color: #888A8E;
+h2::selection {
+  background-color: rgba(72, 49, 212, 0.35);
   color: white;
 }
 
-p::selection{
-  background-color: #888A8E;
+p::selection {
+  background-color: #ccf381;
   color: white;
 }
 
-a::selection{
-  background-color: #888A8E;
+a::selection {
+  background-color: rgba(72, 49, 212, 0.35);
   color: white;
 }
+
 
 .header {
   padding-top: 30px;
   position: relative;
   height: 100vh;
+
   &__logo {
     display: flex;
     align-items: center;
+
     &-icon {
       width: 1.6em;
       height: 1.6em;
       border-radius: 50%;
-      border: 3px solid black;
+      border: 3px solid #ccf381;
       position: relative;
       font-size: 33px;
       float: left;
@@ -118,19 +128,23 @@ a::selection{
         top: 56%;
         left: 50%;
         transform: translate(-50%, -50%);
+        color: #ccf381
       }
     }
   }
+
   &__right {
     margin-left: 25px;
+
     &-title {
       font-weight: 500;
       font-size: 22px;
     }
+
     &-subtitle {
       text-transform: uppercase;
       font-size: 12px;
-      color: rgba(gray, .9);
+      color: #ccf381;
       letter-spacing: 3px;
       margin-top: 3px;
     }
@@ -141,21 +155,22 @@ a::selection{
   position: relative;
   height: 100%;
 
-
   &__content {
     position: absolute;
-    bottom: 90px;
+    bottom: 130px;
+    width: 100%;
+    padding-left: 40px;
   }
 
   &__img {
     position: absolute;
-    bottom: -40px;
-    right: 0;
-    width: 420px;
+    right: 50px;
+    bottom: -130px;
+    width: 600px;
   }
 
   &__name {
-    color: rgba(gray, .7);
+    color: white;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -165,19 +180,33 @@ a::selection{
   &__title {
     font-weight: 600;
     font-size: 80px;
+    line-height: 80px;
     margin: 0.27em 0;
+    color: #ccf381;
+
+    span {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: white;
+      display: inline-block;
+      margin-left: -15px;
+    }
   }
 
   &__text {
-    color: rgba(gray, .9);
+    color: white;
     font-weight: 400;
     font-size: 19px;
     line-height: 28px;
-    width: 60%;
+    width: 550px;
   }
 
   &__link {
     margin-top: 20px;
+    position: relative;
+    top: 40px;
 
     span {
       padding-left: 20px;
@@ -186,7 +215,7 @@ a::selection{
 
     &--item {
       text-decoration: none;
-      color: black;
+      color: #ccf381;
       font-size: 21px;
       font-weight: 500;
     }
@@ -198,7 +227,7 @@ a::selection{
     width: 20px;
     height: 35px;
     border-radius: 50px;
-    border: 2px solid black;
+    border: 2px solid white;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
@@ -208,7 +237,7 @@ a::selection{
       width: 6px;
       height: 9px;
       border-radius: 50%;
-      background-color: black;
+      background-color: white;
       position: absolute;
       left: 50%;
       top: 35%;
@@ -221,105 +250,44 @@ a::selection{
 }
 
 .work {
-  height: 100vh;
+  height: 100%;
+  background-color: white;
 
   &__content {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-  }
-
-  &__item {
-    margin-bottom: 20px;
     position: relative;
-    display: block;
-    width: 47%;
-    cursor: pointer;
+    padding: 70px 50px 70px 50px;
   }
 
-
-  &__item:hover .work__wrapper {
-    opacity: 1;
-    transition: all .4s;
-  }
-
-  &__item:hover .work--img {
-    filter: brightness(30%);
-    transition: all .2s;
-  }
-
-  &__item:not(:hover) .work--img  {
-    transition: .4s;
-  }
-
-  &__item:not(:hover) .work__wrapper  {
-    transition: .4s;
-  }
-
-  &__wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    width: 60%;
-    text-align: center;
-  }
-
-  &--img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  &__right {
+    margin-top: 60px;
+    margin-left: 600px;
   }
 
   &__title {
-    font-size: 30px;
-    color: white;
-    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #4831d4;
   }
 
-  &__text {
-    font-size: 18px;
-    color: white;
-    margin-top: 15px;
-
-    span {
-      padding-top: 10px;
-      display: block;
-    }
+  &__desc {
+    padding-top: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #3d155f;
+    max-width: 601px;
+    font-size: 1.07em;
   }
 
-  &--title {
-    font-size: 42px;
-    position: relative;
-    top: 40px;
-    font-weight: 500;
-  }
-}
-
-.header__logo--big {
-  position: absolute;
-  opacity: .4;
-  top: 140px;
-  font-style: italic;
-  color: white;
-  text-shadow: 0 0 30px rgba(0,0,0,0.1);
-  font-weight: 600;
-
-  text-transform: uppercase;
-  font-size: 235px;
-  text-align: center;
-  width: 100%;
-  letter-spacing: 1px;
 }
 
 .email {
   position: relative;
   z-index: 2001;
+
   &__img {
     position: fixed;
     top: 40px;
@@ -349,44 +317,18 @@ a::selection{
       list-style: none;
       cursor: pointer;
       font-weight: 600;
-      color: #878a8f;
       font-size: 3.25rem;
       line-height: 4.5625rem;
-
-      :hover {
-        transition: .4s;
-        color: white;
-      }
+      color: white;
+      margin-bottom: 20px;
 
       a {
         text-decoration: none;
-        color: #878a8f;
       }
     }
 
-    &--first {
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
-      color:white !important;
-    }
   }
 }
-
-.block__items--first::before {
-  content: "";
-  width: 70px;
-  height: 7px;
-  position: absolute;
-  background-color: #FFFFFF;
-  left: -93px;
-  top: 40%; }
-
-
-
-
-
-
 
 
 @keyframes about_bounce {
@@ -410,17 +352,17 @@ a::selection{
 }
 
 
-
-
 #content {
   overflow-x: hidden;
 }
+
 #hscroll {
   width: calc(500vw);
   height: 100vh;
   display: flex;
   flex-direction: row;
 }
+
 .stage {
   width: calc(100vw);
   height: 100%;
@@ -431,6 +373,7 @@ a::selection{
   z-index: 0;
   padding: 20px;
 }
+
 .proxy {
   visibility: hidden;
   opacity: 0;
@@ -470,37 +413,63 @@ a::selection{
 }
 
 /*== For DEMO Styling Only==*/
-body, header, main, footer, div, section { box-sizing: border-box;}
-body{
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
+body, header, main, footer, div, section {
+  box-sizing: border-box;
 }
-a { color: #fff;}
-section { text-align: center; color: #fff; font-size: 2em; }
+
+
+a {
+  color: #fff;
+}
+
+section {
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+
+  img {
+    padding-right: 30px;
+    width: 180px;
+    height: 180px;
+  }
+
+  svg {
+    padding-right: 30px;
+  }
+}
+
 #stage-1 {
-  background: #dd3e54;
-  background: linear-gradient(to right, #6be585, #dd3e54);
+  background: #090979;
+  //background: linear-gradient(to right, #090979, #00d4ff);
+  background: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
 }
+
 #stage-2 {
   background: #090979;
-  background: linear-gradient(to right, #090979, #00d4ff);
+  background: linear-gradient(to right, #e58d45, #ececec);
 }
+
 #stage-3 {
-  background: #833ab4;
-  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background: #34d59a;
+  background: linear-gradient(to right, #34d59a, #ececec);
 }
+
 #stage-4 {
   background: #009FFF;
-  background: linear-gradient(to right, #009FFF, #ec2F4B);
+
 }
+
 #stage-5 {
-  background: black;
-  //background: linear-gradient(to right, #8A2387, #E94057, #F27121);
+  background: #ccf381;
+  //background: linear-gradient(to right, #4831d4, #ccf381);
+  background: linear-gradient(to right, #8A2387, #E94057, #F27121);
 }
 
 @media only screen and (max-width: 991px) {
-  body { padding-left: 0!important;}
+  body {
+    padding-left: 0 !important;
+  }
   #hscroll {
     width: 100vw;
     height: auto;

@@ -1,61 +1,21 @@
-// const block = document.querySelector('.block');
-// const email = document.querySelector('.email__img');
-// const close = document.querySelector('.block--close');
-// const block__items = document.querySelector('.block__items');
-//
-// email.addEventListener('click', () => {
-//     block.style.cssText = `
-//         visibility: visible;
-//         height: 100vh;
-//         width: 100vw;
-//         z-index: 2000;
-//         position: fixed;
-//         overflow: hidden;
-//         left: 0;
-//         top: 0;
-//     `;
-//
-//     block__items.style.cssText = `
-//         left: 50%;
-//         top: 50%;
-//         transform: translate(-50%, -50%);
-//     `;
-//
-//     setTimeout(() => {
-//         block__items.style.cssText = `
-//         transition: 1s;
-//         opacity: 1;
-//         left: 50%;
-//         top: 50%;
-//         transform: translate(-50%, -50%);
-//     `;
-//     }, 400)
-// })
-//
-//
-// close.addEventListener('click', () => {
-//     block.style.cssText = `
-//         transition: 1s !important;
-//         top: -100vh;
-//         height: 0;
-//         width: 100vw;
-//         left: 0
-//         overflow: visible;
-//         position: fixed;
-//         z-index: 0;
-//     `;
-//
-//     block__items.style.cssText = `
-//          left: -5000px;
-//         top: -5000px;
-//     `;
-//
-//     setTimeout(() => {
-//         block.style.cssText = `
-//          top: 100vh;
-//     `;
-//     }, 600)
-// })
+const stage_1 = document.getElementById("stage-1");
+const stage_2 = document.getElementById("stage-2");
+const stage_3 = document.getElementById("stage-3");
+
+const linkStage = (stage, link) => {
+    stage.addEventListener('click', e => {
+        e.preventDefault();
+
+        window.open(link, "_blank");
+    })
+}
+
+
+// linkStage(stage_1, "https://unionuniverse.one/");
+linkStage(stage_2, "https://cryptodb-sn1pexx.vercel.app");
+linkStage(stage_3, "http://i95239ig.beget.tech/");
+
+
 
 
 gsap.registerPlugin(ScrollTrigger);
