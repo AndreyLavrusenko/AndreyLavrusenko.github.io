@@ -20,25 +20,29 @@
     <header>
         <div class="container">
             <div class="header">
-                <div class="header__logo">
-                    <div class="header__logo-icon"><span>L</span></div>
+                <a href="https://sn1pexx.github.io/" class="header__logo">
+                    <img src="./img/logo.svg" alt="">
                     <div class="header__right">
                         <div class="header__right-title">Лаврусенко Андрей</div>
                         <div class="header__right-subtitle">Frontend developer</div>
                     </div>
-                </div>
+                </a>
             </div>
+
+            <a href="#contact" class="email">
+                <img src="./img/mail.svg" alt="" class="email__img">
+            </a>
 
             <div class="about">
                 <div class="about__content">
                     <img class="about__img animate__animated animate__fadeIn wow" data-wow-delay="0.4s"
                          src="./img/0B94ECBF-9A9F-4231-A857-AA550C7FE6E7_1_105_c%20копия.png">
-                    <h1 class="about__title animate__animated wow animate__fadeInUp" data-wow-delay="0.3s">Frontend <br>
+                    <h1 class="about__title animate__animated wow animate__fadeInUp" data-wow-delay="0.3s">Frontend<br>
                         Developer <span></span></h1>
-                    <p class="about__text animate__animated wow animate__fadeInUp" data-wow-delay="0.4s">Мне нравится создавать надежные продукты с отличным пользовательским интерфейсом.</p>
+                    <div class="about__text animate__animated wow animate__fadeInUp" data-wow-delay="0.4s">Мне нравится создавать надежные продукты с отличным пользовательским интерфейсом.</div>
                     <div class="about__link animate__animated wow animate__fadeInUp" data-wow-delay="0.5s">
                         <a href="#work" class="about__link--item">Мои проекты</a> <span>или</span> <a
-                            href="https://github.com/Sn1peXx" class="about__link--item">GitHub</a>
+                            href="https://github.com/Sn1peXx" target="_blank" class="about__link--item">GitHub</a>
                     </div>
                 </div>
                 <a href="#portfolio" class="about__slider animate__animated wow animate__fadeIn" data-wow-delay="0.6s">
@@ -53,7 +57,7 @@
         <div class="container">
             <div class="work__content">
                 <div class="work__left">
-                    <div class="work__title">Образование</div>
+                    <h3 class="work__title">Образование</h3>
                     <p class="work__desc">
                         Получил диплом по специальности «Программирование в компьютерных системах» в 2022 году.
                         Углубленно стал изучать web-программирование больше 2-х лет назад.
@@ -62,7 +66,7 @@
                     </p>
                 </div>
                 <div class="work__right">
-                    <div class="work__title">Разработка</div>
+                    <h3 class="work__title">Разработка</h3>
                     <p class="work__desc">
                         Я начинал с верстки сайтов для друзей и знакомых.
                         После чего сделал несколько проектов на React и перешел к разработке образовательной платформы - Union, где находился на позиции FullStack разработчика.
@@ -112,6 +116,7 @@
 
 
 <div class="block">
+    <a name="contact"></a>
     <ul class="block__items">
         <li><a href="#" class="block__items--first">Связь со мной</a></li>
         <li class="block__link"><a href="mailto:lavrusenkoandrey@gmail.com">Email</a></li>

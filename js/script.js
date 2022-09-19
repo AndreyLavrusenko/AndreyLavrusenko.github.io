@@ -29,6 +29,7 @@ ScrollTrigger.matchMedia({
     "(min-width: 992px)": function() {
 
         let scrollTween = gsap.to(sections, {
+            // скорость прокрутки
             xPercent: -100 * (sections.length - 1),
             ease: "none"
         });

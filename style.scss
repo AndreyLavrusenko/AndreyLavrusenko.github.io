@@ -94,8 +94,16 @@ h2::selection {
   color: white;
 }
 
+h3::selection {
+  color: #ccf381;
+}
+
+.about__text::selection {
+  color: #ccf381;
+}
+
 p::selection {
-  background-color: #ccf381;
+  background-color: rgba(72, 49, 212, 0.35);
   color: white;
 }
 
@@ -113,24 +121,13 @@ a::selection {
   &__logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
 
-    &-icon {
-      width: 1.6em;
-      height: 1.6em;
-      border-radius: 50%;
-      border: 3px solid #ccf381;
-      position: relative;
-      font-size: 33px;
-      float: left;
-
-      span {
-        position: absolute;
-        top: 56%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #ccf381
-      }
+    img {
+      width: 53px;
+      height: 53px;
     }
+
   }
 
   &__right {
@@ -292,18 +289,9 @@ a::selection {
     position: fixed;
     top: 40px;
     right: 50px;
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
-
-    &:hover {
-      transition: all .7s;
-      transform: scale(1.1);
-    }
-
-    &:not(:hover) {
-      transition: all .7s;
-    }
   }
 }
 
