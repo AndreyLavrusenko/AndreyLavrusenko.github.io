@@ -1,0 +1,208 @@
+@media (max-width: 1250px) {
+  .work__right {
+    margin-left: 0;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+  }
+
+  .work__title {
+    align-items: start;
+    display: flex;
+    width: 600px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about__img {
+    width: 400px;
+  }
+
+  .stage {
+    h2 {
+      animation-name: focus_slider;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      border-bottom: 3px solid white !important;
+    }
+  }
+
+  .stage:hover {
+    h2 {
+      margin-left: 0;
+    }
+    img {
+      transition: 1s;
+      transform: scale(1);
+    }
+    svg {
+      transition: 1s;
+      transform: scale(1);
+    }
+    h2 {
+      transition: 1s;
+      transform: scale(1);
+    }
+  }
+}
+
+
+@media (max-width: 1025px) {
+
+  .email__img {
+    display: none;
+  }
+
+  .header {
+    height: 700px;
+  }
+
+  .about__img {
+    width: 330px;
+  }
+
+  .about__title {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .about__text {
+    width: 485px;
+  }
+
+  .work__title {
+    font-size: 3.5rem;
+  }
+}
+
+
+@media (max-width: 860px) {
+  .about__img {
+    width: 290px;
+    right: 15px;
+    bottom: -85px;
+  }
+
+  .header {
+    height: 600px;
+  }
+
+  .about__content {
+    bottom: 85px;
+    padding-left: 20px;
+  }
+
+  .about__text {
+    width: 420px;
+  }
+
+  .about__title {
+    font-size: 65px;
+    line-height: 65px;
+  }
+}
+
+
+@media (max-width: 770px) {
+  .about__slider {
+    display: none;
+  }
+
+  .work__right {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .about__title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .header {
+    height: 510px;
+  }
+
+  .about__content {
+    padding-left: 0;
+  }
+
+  .about__link {
+    margin-top: -13px;
+    position: relative;
+    top: 49px;
+  }
+
+  .about__img {
+    width: 235px;
+  }
+
+  .about__text {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .work__title {
+    font-size: 3rem;
+  }
+}
+
+
+@keyframes focus_slider {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 991px) {
+  body {
+    padding-left: 0 !important;
+  }
+  #hscroll {
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+  }
+  .stage {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+  }
+  #masthead {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    overflow: hidden;
+    display: none;
+  }
+  .logo {
+    width: 106px;
+    margin: 0 auto;
+    transform: rotate(0deg);
+    left: 0;
+    top: 0;
+  }
+}

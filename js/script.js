@@ -95,7 +95,7 @@ window.addEventListener('scroll', () => {
     }
 
 
-    if (window.pageYOffset >= (clientHeight - 30) * 2) {
+    if (window.pageYOffset >= (clientHeight - 80) * 2) {
         email__img_path.style.cssText = `
             visibility: hidden;
         `;

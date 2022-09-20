@@ -163,7 +163,7 @@ a::selection {
     position: absolute;
     right: 50px;
     bottom: -130px;
-    width: 600px;
+    width: 450px;
   }
 
   &__name {
@@ -247,7 +247,7 @@ a::selection {
 }
 
 .work {
-  height: 100vh;
+  height: 100%;
   background-color: white;
 
   &__content {
@@ -562,34 +562,5 @@ section {
   }
 }
 
-@media only screen and (max-width: 991px) {
-  body {
-    padding-left: 0 !important;
-  }
-  #hscroll {
-    width: 100vw;
-    height: auto;
-    flex-direction: column;
-  }
-  .stage {
-    width: 100vw;
-    height: auto;
-    min-height: 100vh;
-  }
-  #masthead {
-    width: 100%;
-    height: auto;
-    padding: 10px 20px;
-    overflow: hidden;
-    display: none;
-  }
-  .logo {
-    width: 106px;
-    margin: 0 auto;
-    transform: rotate(0deg);
-    left: 0;
-    top: 0;
-  }
-}
 
-
+@import "media";
