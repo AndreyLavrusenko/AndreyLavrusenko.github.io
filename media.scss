@@ -100,6 +100,10 @@
     font-size: 65px;
     line-height: 65px;
   }
+
+  .work__title {
+    width: 100%;
+  }
 }
 
 
@@ -143,6 +147,33 @@
 
   .work__title {
     font-size: 3rem;
+  }
+
+  .about__title span {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 660px) {
+  header {
+    background: #4831d4;
+  }
+
+  .about__img {
+    display: none;
+  }
+
+  .header {
+    height: 430px;
+  }
+
+  .about__text {
+    width: 100%;
+  }
+
+  .stage {
+
   }
 }
 

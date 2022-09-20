@@ -101,3 +101,14 @@ window.addEventListener('scroll', () => {
         `;
     }
 })
+
+
+
+const about__title = document.querySelector('.about__title');
+
+if (document.documentElement.clientWidth <= 660) {
+
+    about__title.textContent = "";
+    about__title.innerHTML = "Frontend Developer <span></span>"
+
+}
