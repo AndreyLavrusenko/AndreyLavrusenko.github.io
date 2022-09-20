@@ -10,7 +10,7 @@ ScrollTrigger.matchMedia({
 
         let scrollTween = gsap.to(sections, {
             // скорость прокрутки
-            xPercent: -100 * (sections.length - 1),
+            xPercent: -100 * (sections.length - 1), // 100
             ease: "none"
         });
 
