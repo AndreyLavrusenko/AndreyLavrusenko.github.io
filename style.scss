@@ -519,17 +519,21 @@ section {
 #stage-1 {
   background: #090979;
   //background: linear-gradient(to right, #090979, #00d4ff);
-  background: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
+  //background: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
+  background: radial-gradient(65.16% 288.62% at 50% 50%, rgba(13, 77, 241, 0.94) 37.38%, #2300FD 71.13%)
 }
 
 #stage-2 {
   background: #090979;
-  background: linear-gradient(to right, #e58d45, #ececec);
+  //background: linear-gradient(to right, #e58d45, #ececec);
+  background: radial-gradient(65.16% 288.62% at 50% 50%, rgba(250, 106, 60, 0.96) 30.57%, rgba(255, 95, 45, 0.88) 53.64%)
+
 }
 
 #stage-3 {
   background: #34d59a;
-  background: linear-gradient(to right, #34d59a, #ececec);
+  //background: linear-gradient(to right, #34d59a, #ececec);
+  background: radial-gradient(65.16% 288.62% at 50% 50%, #1FFF5E 27.38%, rgba(2, 225, 64, 0.9) 71.43%)
 }
 
 #stage-4 {
