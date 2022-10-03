@@ -12,7 +12,7 @@ const linkStage = (stage, link) => {
 }
 
 
-// linkStage(stage_1, "https://unionuniverse.one/");
+linkStage(stage_1, "https://unionuniverse.one/");
 linkStage(stage_2, "https://cryptodb-sn1pexx.vercel.app");
 linkStage(stage_3, "http://i95239ig.beget.tech/");
 
